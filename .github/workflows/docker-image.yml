@@ -20,8 +20,9 @@ jobs:
     - name: Build the Docker image
       run: >
         echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin &&
-        docker build --tag ghcr.io/tgagor/grype:alpine --cache-from ghcr.io/tgagor/grype:alpine . &&
-        docker run -i --rm ghcr.io/tgagor/grype:alpine --help &&
-        docker tag ghcr.io/tgagor/grype:alpine ghcr.io/tgagor/grype:${GITHUB_REF##*/} &&
+        docker build --tag ghcr.io/tgagor/grype --cache-from ghcr.io/tgagor/grype . &&
+        docker run -i --rm ghcr.io/tgagor/grype version &&
+        docker tag ghcr.io/tgagor/grype ghcr.io/tgagor/grype:alpine &&
+        docker tag ghcr.io/tgagor/grype ghcr.io/tgagor/grype:${GITHUB_REF##*/} &&
         docker push ghcr.io/tgagor/grype:alpine &&
         docker push ghcr.io/tgagor/grype:${GITHUB_REF##*/}
