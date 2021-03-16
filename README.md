@@ -1,7 +1,7 @@
-[![build](https://github.com/tgagor/docker-grype/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/tgagor/docker-grype/actions/workflows/build.yml)
-
 tgagor/grype
 ============
+
+[![build](https://github.com/tgagor/docker-grype/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/tgagor/docker-grype/actions/workflows/build.yml)
 
 This Docker image provides [Anchore's Grype](https://github.com/anchore/grype) binary so you can use it easily for testing security of Docker images.
 
