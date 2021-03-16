@@ -1,3 +1,5 @@
+[![build](https://github.com/tgagor/docker-grype/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/tgagor/docker-grype/actions/workflows/build.yml)
+
 tgagor/grype
 ============
 
