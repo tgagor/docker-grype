@@ -1,7 +1,7 @@
 FROM alpine:3
 MAINTAINER tgagor, https://github.com/tgagor
 
-ARG GRYPE_VERSION=v0.7.0
+ARG GRYPE_VERSION=v0.8.0
 RUN apk add --no-cache curl && \
     curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | \
         sh -s -- -d -b /usr/local/bin $GRYPE_VERSION && \
